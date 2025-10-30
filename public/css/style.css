@@ -1,0 +1,123 @@
+/* === Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* === Navigation Bar === */
+  nav {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    text-align: center;
+  }
+  
+  nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* === Page Container === */
+  .container {
+    flex: 1;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 40px; /* space for fixed nav */
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  
+  /* === Headings === */
+  h1, h2, h3 {
+    color: #f1f1f1;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+  }
+  
+  p, li {
+    color: #bdbdbd;
+  }
+  
+  /* === Lists === */
+  ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  /* === Gallery Page === */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 20px;
+    justify-items: center; /* centers items horizontally */
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: grayscale(20%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    filter: grayscale(0%);
+  }
+  
+  /* === Footer === */
+  footer {
+    background-color: #1c1c1c;
+    color: #bdbdbd;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  
+  /* === Responsive Design === */
+  @media (max-width: 900px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  
